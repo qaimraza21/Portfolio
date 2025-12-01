@@ -8,7 +8,7 @@ const About = () => {
     const grid2Container = useRef();
     return (
         
-        <section className="c-space section-spacing">
+        <section id="about" className="c-space section-spacing">
         
             <h2 className="text-heading">About Me</h2>
         
