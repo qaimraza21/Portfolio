@@ -1,26 +1,30 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-function Navigation(){
+function Navigation() {
+    const handleScroll = (id) => {
+        const section = document.querySelector(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <ul className="nav-ul">
             <li className="nav-li">
-                <a className="nav-link" href="#home"> Home </a>
+                <button className="nav-link" onClick={() => handleScroll("#home")}> Home </button>
             </li>
-
-             <li className="nav-li">
-                <a className="nav-link" href="#about"> About </a>
+            <li className="nav-li">
+                <button className="nav-link" onClick={() => handleScroll("#about")}> About </button>
             </li>
-
-             <li className="nav-li">
-                <a className="nav-link" href="#work"> Work </a>
+            <li className="nav-li">
+                <button className="nav-link" onClick={() => handleScroll("#work")}> Work </button>
             </li>
-
-             <li className="nav-li">
-                <a className="nav-link" href="#contact"> Contact </a>
+            <li className="nav-li">
+                <button className="nav-link" onClick={() => handleScroll("#contact")}> Contact </button>
             </li>
         </ul>
-    )
+    );
 }
 
 const Navbar = () => {
